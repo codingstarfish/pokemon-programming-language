@@ -10,8 +10,8 @@
 
 %%
 
-[\t\r\n]+ {     }/* 공백,줄바꿈 처리*/  
-"//".* {    }/*주석 무시*/
+[\t\r\n]+ {}/* 공백,줄바꿈 처리*/  
+"//".* {}/*주석 무시*/
 
 
 /*변수선언 키워드*/
@@ -21,7 +21,7 @@
 
 /*변수대입 키워드 */
 
-"는" { return NUM_ASSIGN; }
+"는" { return START_NUM_ASSIGN; }
 
 "레벨이다." {return END_NUM_ASSIGN;}
 
@@ -40,13 +40,13 @@
 
 /*출력 키워드*/
 
-"는 기분 좋은듯이 울음소리를 냈다!" {return PRINT;}
+"는 기분 좋은듯이 울음소리를 냈다!" { return PRINT; }
 
 /* 숫자 */
-[0-9]+          { 
-                    yylval.ival = atoi(yytext);
-                    return NUMBER; 
-                }
+[0-9]+  { 
+    yylval.ival = atoi(yytext);
+    return NUMBER; 
+}
 /* 식별자 */
 
 [a-zA-Z가-힣_][a-zA-Z0-9가-힣_]* {
