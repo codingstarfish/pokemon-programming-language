@@ -49,9 +49,6 @@
 program:
     stmt_list{
         root = $1;
-        if (asm_out != NULL) {
-            gen_x86_program($1, asm_out);
-        }
         printf("parsing completed, AST created\n");
     }
     ;
@@ -60,7 +57,7 @@ stmt_list:
     | stmt_list stmt {$$= ast_stmt_list($1,$2);}
     ;
 stmt:
-      IDENT CAUGHT { $$ = ast_var_decl($1,NULL);} /*<변수>를 잡았다!*/
+      IDENT CAUGHT { $$ = ast_var_decl($1);} /*<변수>를 잡았다!*/
     | IDENT START_NUM_ASSIGN NUMBER END_NUM_ASSIGN { $$ = ast_assign(ast_var($1),ast_int($3)); } /*<변수>는<number>레벨이다.*/
     | IDENT START_ASSIGN expr END_ASSIGN { $$ = ast_assign(ast_var($1),$3); }/*<변수>를 향해<expr>는 쓰러졌다.*/
     | IDENT PRINT { $$ = ast_printf(ast_var($1)); } /*<변수>는 기분 좋은듯이 울음소리를 냈다!*/
