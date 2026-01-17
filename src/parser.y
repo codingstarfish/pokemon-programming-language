@@ -3,7 +3,6 @@
     #include <stdlib.h>
     #include <string.h>
     #include "ast.h"
-    #include "codegen_x86.h"
     extern int yylex(void);
     void yyerror(const char* s);
     extern FILE* asm_out;
@@ -53,7 +52,7 @@ program:
     }
     ;
 stmt_list:
-    stmt {$$=$1}
+    stmt {$$=$1;}
     | stmt_list stmt {$$= ast_stmt_list($1,$2);}
     ;
 stmt:
