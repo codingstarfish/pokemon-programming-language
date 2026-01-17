@@ -12,6 +12,7 @@ typedef enum
     AST_VAR,
     AST_INT,
     AST_STMT_LIST,
+
     AST_PRINTF,
     AST_ASSIGN,
     AST_VAR_DECL,

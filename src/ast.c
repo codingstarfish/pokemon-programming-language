@@ -12,7 +12,7 @@ static AST *make_node(NodeType type)
         exit(1);
     }
     node->type = type;
-    node->ival = NULL;
+    node->ival = 0;
     node->left = NULL;
     node->right = NULL;
     node->next = NULL;
