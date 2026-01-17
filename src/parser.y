@@ -39,7 +39,7 @@
 
 %type <node> program stmt_list stmt expr
 
-/*연산자 우선순위, 아래일수록 높음*/
+/*연산자, 우선순위 아래일수록 높음*/
 
 %left OP_ADD OP_SUB
 %left OP_MUL OP_DIV
@@ -64,12 +64,10 @@ stmt:
     ;
 expr: 
     IDENT {$$ = ast_var($1);}
-    | NUMBER {$$ = ast_int($1);}
     | expr OP_ADD expr{$$ = ast_bin(AST_ADD,$1,$3);}
     | expr OP_SUB expr{$$ = ast_bin(AST_SUB,$1,$3);}
     | expr OP_MUL expr{$$ = ast_bin(AST_MUL,$1,$3);}
     | expr OP_DIV expr{$$ = ast_bin(AST_DIV,$1,$3);}
-
     ;
 %%
 
