@@ -84,6 +84,12 @@
 "어떠냐? 생각보다 어렵지 않지? 너도 훌륭한 포켓몬 코딩 마스터가 될 수 있을 거다!
 자! 그럼 너만의 전설을 코드로 작성해 보거라! 꿈과 모험, 그리고 포켓몬의 세계로! 레츠고!"
 
+
+---
+## ⚖️ Disclaimer
+This project is a fan-made compiler and is not affiliated with Nintendo, Game Freak, or The Pokémon Company.
+All Pokémon names and related media are intellectual property of their respective owners.
+
 **To-Do LIST**
 ---
 - 실행방법 추가하기
