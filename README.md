@@ -1,13 +1,16 @@
 <h1>Pokemon-programming-language</h1>
 
-본 프로젝트는 직접 설계한 프로그래밍 언어를 해석하고 실행 가능한 바이너리로 변환하는 컴파일러를 구현 프로젝트입니다. 언어의 문법은 포켓몬 게임의 대사 형식을 차용하였으며 컴파일러 구축을 위해 다음과 같은 도구들을 사용하였습니다
+![C](https://img.shields.io/badge/C-Standard-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Flex](https://img.shields.io/badge/Flex-Lexer-blue?style=for-the-badge)
+![Bison](https://img.shields.io/badge/Bison-Parser-red?style=for-the-badge)
+![GCC](https://img.shields.io/badge/GCC-Compiler-green?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Make](https://img.shields.io/badge/Make-Build_Tool-orange?style=for-the-badge)
+![Assembly](https://img.shields.io/badge/Assembly-x86--64-lightgrey?style=for-the-badge)
 
-Flex (The Fast Lexical Analyzer): 정규 표현식을 기반으로 소스 코드를 토큰으로 분리하는 어휘 분석기 생성
+본 프로젝트는 직접 설계한 프로그래밍 언어를 실행 가능한 바이너리로 변환하는 컴파일러 구현 프로젝트입니다. 언어의 문법은 포켓몬 게임의 대사 형식을 차용하였으며 컴파일러 구축을 위해 위 기술들을 활용하였습니다.
 
-Bison (GNU Parser Generator): BNF 문법 규칙에 따라 토큰의 구조를 파악하고 AST(추상 구문 트리)를 구축하는 구문 분석기(Parser) 생성
 
 ## 포켓몬 프로그래밍 언어
-
 
  
 "이 세계에는 신비한 생명체들이 숲과 동굴, 바다 여기저기에 살고 있지.
@@ -16,7 +19,7 @@ Bison (GNU Parser Generator): BNF 문법 규칙에 따라 토큰의 구조를 �
 자, 그럼 151마리의 포켓몬들과 함께하는 코딩의 모험을 떠날 준비는 되었느냐?
 이제부터 내가 이 언어의 문법을 차근차근 설명해 주마!"
 
----
+
 
 ### 1. 포켓몬 잡기 (변수 선언)
 
