@@ -1,7 +1,7 @@
 # 컴파일러 및 옵션 설정
 CC = gcc
 CFLAGS = -I src -fexec-charset=UTF-8
-TARGET = my_compiler
+TARGET = pplcompiler
 
 # 소스 파일 및 생성 파일 정의
 SRCS = src/main.c src/parser.tab.c src/lex.yy.c src/ast.c src/codegen.c
