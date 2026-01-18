@@ -1,0 +1,15 @@
+*.exe
+pplcompiler
+program
+
+*.o
+out.s
+
+src/lex.yy.c
+src/parser.tab.c
+src/parser.tab.h
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
