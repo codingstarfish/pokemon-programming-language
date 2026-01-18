@@ -96,17 +96,14 @@ void gen_stmt(AST *node, FILE *fp)
     switch (node->type)
     {
     case AST_PRINTF: // 출력
-#ifdef _WIN32
-                     // [Windows] MS x64 호출 규약
-        // 인자 순서: RCX, RDX, R8, R9...
-        // Shadow Space(32바이트) 필수 확보
+        gen_expr(node->left, fp);
+#ifdef _WIN32 // Windows
         fprintf(fp, "    movl %%eax, %%edx\n");
         fprintf(fp, "    leaq .LC0(%%rip), %%rcx\n");
         fprintf(fp, "    subq $32, %%rsp\n");
         fprintf(fp, "    call printf\n");
         fprintf(fp, "    addq $32, %%rsp\n");
-#else
-        gen_expr(node->left, fp);
+#else // linux
         fprintf(fp, "    movl %%eax, %%esi\n");
         fprintf(fp, "    leaq .LC0(%%rip), %%rdi\n");
         fprintf(fp, "    movl $0, %%eax\n");
