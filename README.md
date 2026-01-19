@@ -94,9 +94,9 @@ All Pokémon names and related media are intellectual property of their respecti
 ---
 - 실행방법 추가하기
 - 에러 메시지 수정하기
-- 예시 코드 추가하기
+- ~~예시 코드 추가하기~~
 - 자료형 추가하기
 - 비교연산자 추가하기
 - 조건문 추가하기
 - 반복문 추가하기
-- 도커로 실행환경 세팅
+- ~~도커로 실행환경 세팅~~
